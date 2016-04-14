@@ -24,7 +24,7 @@ def students_list(request):
             'ticket': 5332,
             'image': 'img/3.jpg'}
             )
-    return render(request, 'students_list.html', {'students': students}) # В качестве значения передали переменную картежа с элементами словаря
+    return render(request, 'students/students_list.html', {'students': students}) # В качестве значения передали переменную картежа с элементами словаря
 
 def students_add(request):
     return HttpResponse('<h1>Student Add Form</h1>')
