@@ -16,7 +16,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.views.static import serve as static_serve
 from .settings import MEDIA_ROOT, DEBUG
-from students.views import students, groups, journal
+from students.views import students, groups, journal, examinations
 
 
 
@@ -36,6 +36,9 @@ urlpatterns = [
 
     # Visit urls
     url(r'^journal/$', journal.journal_list, name='journal'),
+
+    # Examinations
+    url(r'^examinations/$', examinations.examinations_list, name='examinations'),
 ]
 
 if DEBUG:
